@@ -1,0 +1,25 @@
+:root{
+    --preto--:#000000;
+    --azul--:#0031FD;
+    --branco--:#ffff;
+
+}
+
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 8em 1em 8em;
+    background-color: var(--azul--);
+    
+}
+a{
+    text-decoration: none;
+    color: var(--branco--);
+}
+.nome{
+    color: var(--branco--);
+}
+.lista__menu{
+    display: flex;
+    gap: 2em;
+}
