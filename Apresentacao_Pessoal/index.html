@@ -20,5 +20,76 @@
     </ul>
     </div>
     </header>
+
+    <main>
+        <div class="primeira__secao">
+        <div class="nome__atributo" >
+            <h2 class="nome__estatico">Talles é</h2>
+            <h3 class="atributo__rotativo" id="atributo">Front-End</h3>
+        </div>
+        <div class="relogio">
+            <span id="periodo">PM</span>
+            <span id="horas">00</span>
+            <span id="minutos">00</span>
+        </div>
+        </div>
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        function updateClock() {
+            const now = new Date(); // Cria um novo objeto Date com a data e hora atuais
+
+            let hours = now.getHours(); // Pega as horas (0-23)
+            let minutes = now.getMinutes(); // Pega os minutos (0-59)
+            let period = 'AM'; // Assume AM inicialmente
+
+            // Converte para o formato de 12 horas e define AM/PM
+            if (hours >= 12) {
+                period = 'PM';
+                if (hours > 12) {
+                    hours -= 12; // Se for 13, vira 1, se for 14, vira 2, etc.
+                }
+            }
+            if (hours === 0) { // Se for meia-noite (0 horas), vira 12 AM
+                hours = 12;
+            }
+
+            // Adiciona um zero à esquerda se as horas ou minutos forem menores que 10
+            hours = hours < 10 ? '0' + hours : hours;
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+
+            // Atualiza o conteúdo dos elementos com os IDs específicos
+            document.getElementById('horas').textContent = hours;
+            document.getElementById('minutos').textContent = minutes;
+            document.getElementById('periodo').textContent = period;
+        }
+
+        // Chama a função updateClock a cada 1 segundo (1000 milissegundos)
+        setInterval(updateClock, 1000);
+
+        // Chama a função uma vez imediatamente para exibir a hora assim que a página carregar
+        updateClock();
+    </script>
 </body>
 </html>

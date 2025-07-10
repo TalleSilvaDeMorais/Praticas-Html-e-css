@@ -10,16 +10,38 @@
     justify-content: space-between;
     padding: 1em 8em 1em 8em;
     background-color: var(--azul--);
-    
+    align-items: center;
 }
 a{
     text-decoration: none;
     color: var(--branco--);
+    font-size: 30px;
 }
 .nome{
     color: var(--branco--);
+    font-size: 40px;
 }
 .lista__menu{
     display: flex;
     gap: 2em;
+}
+.primeira__secao{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 8em 1em 8em;
+    background-color: var(--preto--);
+}
+.nome__estatico{
+    font-size: 140px;
+    color: var(--branco--);
+}
+.atributo__rotativo{
+    font-size: 120px;
+    color: var(--branco--);
+}
+.relogio{
+    color: var(--branco--);
+    background-color: #0031FD;
+    height: 83px;
+    width: 289px;
 }
